@@ -1,6 +1,22 @@
-# flask
-A minimal Flask web application.
+# README
 
-For a step-by-step guide to deploying on [Railway](https://railway.app/?referralCode=alphasec), see [this](https://alphasec.io/how-to-deploy-a-python-flask-app-on-railway/) post, or click the button below.
+## Introdução
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/igzwwg?referralCode=alphasec)
+Essa é uma aplicação web desenvolvida com Flask que gera texto com base em uma mensagem de entrada. A aplicação utiliza a API do Groq para gerar o texto.
+
+## Como usar
+
+Para usar a aplicação, você precisa fazer uma solicitação POST para o endpoint `/groq-generator`. O corpo da solicitação deve conter os seguintes campos:
+
+- **username**: o nome de usuário para autenticação
+- **password**: a senha para autenticação
+- **message**: a mensagem que você deseja que o modelo de linguagem gerencie
+
+### Exemplo de solicitação:
+
+```json
+{
+    "username": "seu_usuario",
+    "password": "sua_senha",
+    "message": "Este é um exemplo de mensagem"
+}

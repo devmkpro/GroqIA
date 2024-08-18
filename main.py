@@ -27,7 +27,7 @@ def generate_text():
         client = Groq(api_key=GROQ_KEY)
         chat_completion = client.chat.completions.create(
             messages=[{"role": "user", "content": request.json["message"]}],
-            model="llama3-8b-8192",
+            model="llama-3.1-8b-instant",
         )
         return jsonify({"text": chat_completion.choices[0].message.content})
     except AuthenticationError as e:
